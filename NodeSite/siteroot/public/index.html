@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Page</title>
+    <script src="js/lib/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <div>
+        <p>The following buttons test 4 basic verbs against an express server.</p>
+        <button onclick="testActions('GET');">GET</button>
+        <button onclick="testActions('POST');">POST</button>
+        <button onclick="testActions('PUT');">PUT</button>
+        <button onclick="testActions('DELETE');">DELETE</button>
+    </div>
+    <div>
+        <p>The following form demonstrates route values</p>
+        <div>
+            <h2>Get User</h2>
+            <label for="txtUserId">User ID:</label>
+            <input id="txtUserId" name="txtUserId" type="text" />
+            <button>Process</button>
+        </div>
+        <div>
+            <h2>Get Users</h2>
+            <button>Process</button>
+        </div>
+        <div>
+            <h2>Update User</h2>
+            <label for="txtFirstName">First Name:</label>
+            <input id="txtFirstName" name="txtFirstName" type="text" />
+            <label for="txtLastName">Last Name:</label>
+            <input id="txtLastName" name="txtLastName" type="text" />
+            <label for="cboGender">Gender:</label>
+            <select id="cboGender" name="cboGender">
+                <option value="">-Select-</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <button onclick="">Get Users</button><br />
+        <button onclick="">Get User</button><br />
+        <button onclick="">Update User</button>
+    </div>
+    <script>
+        function testActions(verb) {
+            $.ajax({
+                url: '/actions',
+                type: verb,
+                success: function (data, status, xhr) {
+                    console.log('server returned: ' + data.result);
+                }
+            })
+        }
+        function getUser(id) {
+        }
+        function getUsers() {
+        }
+        function updateUser(user) {
+
+        }
+    </script>
+</body>
+</html>
