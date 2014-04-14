@@ -1,5 +1,6 @@
 ﻿@html.extend('_shared/layout', function (model) {
 	@html.block('content', function (model) {
 		<h1>Home/Index</h1>
+		<a href="index.html">Test Page</a>
 	})
 })

@@ -18,29 +18,34 @@
         <div>
             <h2>Get User</h2>
             <label for="txtUserId">User ID:</label>
-            <input id="txtUserId" name="txtUserId" type="text" />
-            <button>Process</button>
+            <input id="txtUserId" name="txtUserId" type="text" /><br />
+            <button onclick="getUser($('#txtUserId').val());">Process</button>
+            <button onclick="getUserFirstName($('#txtUserId').val());">Process</button>
         </div>
         <div>
             <h2>Get Users</h2>
-            <button>Process</button>
+            <label for="cboFilter">Filter by Gender:</label>
+            <select id="cboFilter" name="cboFilter">
+                <option value="">All</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br />
+            <button onclick="getUsers($('#cboFilter').val());">Process</button>
         </div>
         <div>
             <h2>Update User</h2>
             <label for="txtFirstName">First Name:</label>
-            <input id="txtFirstName" name="txtFirstName" type="text" />
+            <input id="txtFirstName" name="txtFirstName" type="text" /><br />
             <label for="txtLastName">Last Name:</label>
-            <input id="txtLastName" name="txtLastName" type="text" />
+            <input id="txtLastName" name="txtLastName" type="text" /><br />
             <label for="cboGender">Gender:</label>
             <select id="cboGender" name="cboGender">
                 <option value="">-Select-</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
-            </select>
+            </select><br />
+            <button onclick="updateUser({ firstName: $('#txtFirstName').val(), lastName: $('#txtLastName').val(), gender: $('#cboGender').val() });">Process</button>
         </div>
-        <button onclick="">Get Users</button><br />
-        <button onclick="">Get User</button><br />
-        <button onclick="">Update User</button>
     </div>
     <script>
         function testActions(verb) {
@@ -52,12 +57,46 @@
                 }
             })
         }
-        function getUser(id) {
+        function getUserFirstName(id) {
+            $.ajax({
+                url: '/users/' + id + '/firstname',
+                type: 'GET',
+                success: function (data, status, xhr) {
+                    console.log(data);
+                }
+            })
         }
-        function getUsers() {
+        function getUser(id) {
+            $.ajax({
+                url: '/users/' + id,
+                type: 'GET',
+                success: function (data, status, xhr) {
+                    console.log(data);
+                }
+            })
+        }
+        function getUsers(filter) {
+            var url = '/users';
+            if (filter) {
+                url += '?gender=' + filter;
+            }
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function (data, status, xhr) {
+                    console.log(data);
+                }
+            })
         }
         function updateUser(user) {
-
+            $.ajax({
+                url: '/users',
+                type: 'POST',
+                data: user,
+                success: function (data, status, xhr) {
+                    console.log(data);
+                }
+            })
         }
     </script>
 </body>
