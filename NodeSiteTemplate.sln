@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodeSite", "NodeSite\NodeSite.csproj", "{35AE07F4-CF5A-4E3A-8387-E4EDB8024D2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodeSiteTemplate", "NodeSiteTemplate\NodeSiteTemplate.csproj", "{35AE07F4-CF5A-4E3A-8387-E4EDB8024D2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

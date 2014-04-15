@@ -10,6 +10,7 @@ var userdb = [
     { firstname: 'Delta', lastname: 'Burnet', gender: 'male' }
 ];
 
+// demonstrates route parameters
 users.get('/:userid/firstname', function (req, res, next) {
     var userid = parseInt(req.params.userid);
     var user = userdb[userid - 1];
@@ -31,6 +32,7 @@ users.get('/:userid', function (req, res, next) {
 });
 
 users.get('/', function (req, res, next) {
+    // demonstrates the user of query strings
     if (req.query.gender) {
         res.json(_.where(userdb, { gender: req.query.gender }));
     }
@@ -38,6 +40,7 @@ users.get('/', function (req, res, next) {
 });
 
 users.post('/', function (req, res, next) {
+    // demonstrates body parser in action
     console.log(req.body);
     var length = userdb.push(req.body);
     res.json({ id: length });
