@@ -1,0 +1,75 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Custom Node App</Name>
+    <Description>Node Express app using TypeScript</Description>
+    <ProjectType>TypeScript</ProjectType>
+    <NumberOfParentCategoriesToRollUp>0</NumberOfParentCategoriesToRollUp>
+    <SortOrder>0</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>CustomNodeApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>TypeScript.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="NodeSiteTemplate.csproj" File="NodeSiteTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="README.md">README.md</ProjectItem>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <Folder Name="typings" TargetFolderName="typings">
+          <Folder Name="express" TargetFolderName="express">
+            <ProjectItem ReplaceParameters="true" TargetFileName="express.d.ts">express.d.ts</ProjectItem>
+          </Folder>
+          <Folder Name="jquery" TargetFolderName="jquery">
+            <ProjectItem ReplaceParameters="true" TargetFileName="jquery.d.ts">jquery.d.ts</ProjectItem>
+          </Folder>
+          <Folder Name="lodash" TargetFolderName="lodash">
+            <ProjectItem ReplaceParameters="true" TargetFileName="lodash.d.ts">lodash.d.ts</ProjectItem>
+          </Folder>
+          <Folder Name="node" TargetFolderName="node">
+            <ProjectItem ReplaceParameters="true" TargetFileName="node.d.ts">node.d.ts</ProjectItem>
+          </Folder>
+          <Folder Name="socket.io" TargetFolderName="socket.io">
+            <ProjectItem ReplaceParameters="true" TargetFileName="socket.io.d.ts">socket.io.d.ts</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+      <Folder Name="siteroot" TargetFolderName="siteroot">
+        <ProjectItem ReplaceParameters="true" TargetFileName="app.ts">app.ts</ProjectItem>
+        <Folder Name="models" TargetFolderName="models" />
+        <ProjectItem ReplaceParameters="false" TargetFileName="package.json">package.json</ProjectItem>
+        <Folder Name="public" TargetFolderName="public">
+          <Folder Name="css" TargetFolderName="css">
+            <ProjectItem ReplaceParameters="true" TargetFileName="site.css">site.css</ProjectItem>
+          </Folder>
+          <Folder Name="img" TargetFolderName="img" />
+          <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+          <Folder Name="js" TargetFolderName="js">
+            <Folder Name="lib" TargetFolderName="lib">
+              <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.11.0.min.js">jquery-1.11.0.min.js</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="jquery-2.1.0.min.js">jquery-2.1.0.min.js</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="lodash.min.js">lodash.min.js</ProjectItem>
+            </Folder>
+          </Folder>
+        </Folder>
+        <Folder Name="routes" TargetFolderName="routes">
+          <ProjectItem ReplaceParameters="true" TargetFileName="actions.ts">actions.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="home.ts">home.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="users.ts">users.ts</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="routes.ts">routes.ts</ProjectItem>
+        <Folder Name="views" TargetFolderName="views">
+          <Folder Name="_shared" TargetFolderName="_shared">
+            <ProjectItem ReplaceParameters="false" TargetFileName="404.vash">404.vash</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="layout.vash">layout.vash</ProjectItem>
+          </Folder>
+          <Folder Name="home" TargetFolderName="home">
+            <ProjectItem ReplaceParameters="false" TargetFileName="index.vash">index.vash</ProjectItem>
+          </Folder>
+        </Folder>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

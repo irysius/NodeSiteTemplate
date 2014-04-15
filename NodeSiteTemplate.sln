@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NodeSiteTemplate", "NodeSiteTemplate\NodeSiteTemplate.csproj", "{35AE07F4-CF5A-4E3A-8387-E4EDB8024D2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomNodeApp", "CustomNodeApp\CustomNodeApp.csproj", "{47BBADBA-3E09-4A96-958F-EFB9C84C70A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{35AE07F4-CF5A-4E3A-8387-E4EDB8024D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35AE07F4-CF5A-4E3A-8387-E4EDB8024D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35AE07F4-CF5A-4E3A-8387-E4EDB8024D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BBADBA-3E09-4A96-958F-EFB9C84C70A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47BBADBA-3E09-4A96-958F-EFB9C84C70A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47BBADBA-3E09-4A96-958F-EFB9C84C70A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47BBADBA-3E09-4A96-958F-EFB9C84C70A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
