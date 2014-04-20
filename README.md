@@ -1,5 +1,13 @@
 #Node TypeScript App Template
 
+## Prerequisites
+
+* Visual Studio 2013
+* Visual Studio 2013 SDK
+* TypeScript 1.0
+	* If you don't want to install VS 2013 Update 2 RC, you can always just install the TypeScript tools for VS 2012.
+* Node.js
+
 ## Table of Contents
 
 * Introduction
