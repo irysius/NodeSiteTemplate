@@ -1,5 +1,9 @@
 ﻿@html.extend('_shared/layout', function (model) {
 	@html.block('content', function(model) {
-	<p>404 Page Not Found</p>
+		<div class="row">
+			<div class="col-md-12">
+				<p>Page Not Found</p>
+			</div>
+		</div>
 	})
 })

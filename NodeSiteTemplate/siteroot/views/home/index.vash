@@ -1,6 +1,57 @@
 ﻿@html.extend('_shared/layout', function (model) {
 	@html.block('content', function (model) {
-		<h1>Home/Index</h1>
-		<a href="index.html">Test Page</a>
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+			<p>This is a sample Node.js application.</p>
+			<p>It is built on top of Express 4.x, and uses Vash as the default view engine.</p>
+			<p><a class="btn btn-primary" href="@model.nodelink">Learn more &raquo;</a></p>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Core Node Modules</h2>
+				<h3>Express 4.x</h3>
+				<p><small>very flexible web application framework.</small></p>
+				<p>Express 4.x brings a better routing solution, and decouples itself from a lot of the Connect middleware.</p>
+				<p><a class="btn btn-info" href="@model.expresslink">More about Express &raquo;</a></p>
+
+				<h3>Vash</h3>
+				<p><small>view engine with syntax strongly reminescent of Microsoft ASP.NET's Razor.</small></p>
+				<p><a class="btn btn-info" href="@model.vashlink">More about Vash &raquo;</a></p>
+
+				<h3>Connect</h3>
+				<p><small>Express 4.x has since decoupled themselves from a lot of the middleware that were originally from Connect.</small></p>
+				<p>The modules that needed to be brought back in as a result of this are: <em>compression</em>, <em>method-override</em>, <em>body-parser</em>, and <em>errorhandler</em>.</p>
+				<p><a class="btn btn-info" href="@model.connectlink">More about Connect &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Fancy Node Modules</h2>
+				
+				<h3>Socket.io</h3>
+				<p><small>because sockets are cool, amirite?</small></p>
+				<p><a class="btn btn-info" href="@model.socketiolink">More about Socket.io &raquo;</a></p>
+
+				<h3>Marked</h3>
+				<p><small>Markdown compiler.</small></p>
+				<p><a class="btn btn-info" href="@model.markedlink">More about Marked &raquo;</a></p>
+
+				<h3>Everyauth</h3> 
+				<p><small>authentication handler for a lot of different services</small></p>
+				<p><a class="btn btn-info" href="@model.everyauthlink">More about Everyauth &raquo;</a></p>
+			</div>
+			<div class="col-md-4">
+				<h2>Additional Resources</h2>
+				<h3>Forever</h3>
+				<p><small>useful node module for keeping a node web service up and running.</small></p>
+				<p>This module is used by the site, but could be installed on a server to ease deployment.</p>
+				<p><a class="btn btn-info" href="@model.foreverlink">More about Forever &raquo;</a></p>
+
+				<h3>Lodash</h3>
+				<p><small>JavaScript collection utilities that's an offshoot of underscore, with more capabilities.</small></p>
+				<p><a class="btn btn-info" href="@model.lodashlink">More about Lodash &raquo;</a></p>
+			</div>
+		</div>
+	})
+	@html.block('footer', function (model) {
+		<p>&copy; 2014 - Custom Node.js Application</p>
 	})
 })

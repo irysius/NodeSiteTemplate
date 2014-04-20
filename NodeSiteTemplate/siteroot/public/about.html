@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/site.css" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Draws the toggleable drop down button with three lines across when view width needs to collapse everything -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-navbar">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Node.js App</a>
+            </div>
+            <div class="collapse navbar-collapse" id="site-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/demos/">Demos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>About Us</h2>
+                <p>This is a statically served page.</p>
+                <p>The purpose of this sample site is to act as a reminder of what's available in a node express app.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Relevant files</h3>
+                <p><small>All files below assume siteroot.</small></p>
+                <ul>
+                    <li>app.js</li>
+                    <li>public/about.html</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

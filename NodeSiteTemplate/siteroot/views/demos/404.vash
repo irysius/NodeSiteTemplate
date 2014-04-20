@@ -1,0 +1,22 @@
+﻿@html.extend('_shared/layout', function (model) {
+	@html.block('content', function (model) {
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Demo</h3>
+				<p>The following link will cause an 404 error.</p>
+				<a class="btn btn-link" href="/doesnotexist">Non-Existant Url</a>
+			</div>
+			<div class="col-md-4">
+				<h3>Relevant files</h3>
+				<p><small>All files below assume siteroot.</small></p>
+				<ul>
+					<li>app.js</li>
+					<li>views/404.vash</li>
+				</ul>
+			</div>
+		</div>
+	})
+})

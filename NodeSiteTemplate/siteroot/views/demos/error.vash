@@ -1,0 +1,21 @@
+﻿@html.extend('_shared/layout', function (model) {
+	@html.block('content', function (model) {
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Demo</h3>
+				<p>The following link will throw an exception in the app.</p>
+				<a class="btn btn-link" href="/demos/error/throw">Error Throwing Url</a>
+			</div>
+			<div class="col-md-4">
+				<h3>Relevant files</h3>
+				<p><small>All files below assume siteroot.</small></p>
+				<ul>
+					<li>app.js</li>
+				</ul>
+			</div>
+		</div>
+	})
+})

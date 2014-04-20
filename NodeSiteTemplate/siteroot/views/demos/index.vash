@@ -1,0 +1,20 @@
+﻿@html.extend('_shared/layout', function (model) {
+	@html.block('content', function (model) {
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+			<p>This page demonstrates common website functionality implemented in Node.</p>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<p><a class="btn btn-info" href="/demos/404">Showing 404s &raquo;</a></p>
+				<p><a class="btn btn-info" href="/demos/error">Showing Error Pages &raquo;</a></p>
+				<p><a class="btn btn-info" href="/about.html">Serving Static Pages &raquo;</a></p>
+				<p><a class="btn btn-info" href="/demos/rest">Basic REST API &raquo;</a></p>
+				<p><a class="btn btn-info" href="/demos/parameters">Routing Parameters &raquo;</a></p>
+				<p><a class="btn btn-info" href="/demos/markdown">Using Marked for Markdown rendering &raquo;</a></p>
+				<p><a class="btn btn-info" href="/demos/basicauth">Basic Authentication &raquo;</a></p>
+				<p><a class="btn btn-info" href="/demos/sockets">Basic Socket.io &raquo;</a></p>
+			</div>
+		</div>
+	})
+})

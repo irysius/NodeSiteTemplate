@@ -1,0 +1,30 @@
+﻿@html.extend('_shared/layout', function (model) {
+	@html.block('content', function (model) {
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Demo</h3>
+				<p>The following buttons test four(4) basic verbs against the server.</p>
+				<button type="button" class="btn btn-primary" onclick="restCtrl.action('GET');">GET</button>
+				<button type="button" class="btn btn-primary" onclick="restCtrl.action('POST');">POST</button>
+				<button type="button" class="btn btn-warning" onclick="restCtrl.action('PUT');">PUT</button>
+				<button type="button" class="btn btn-danger" onclick="restCtrl.action('DELETE');">DELETE</button>
+				<hr />
+				<p><label for="response">Response From Server: </label><input type="text" class="form-control" id="response" name="response" readonly></p>
+			</div>
+			<div class="col-md-4">
+				<h3>Relevant files</h3>
+				<p><small>All files below assume siteroot.</small></p>
+				<ul>
+					<li>routes.js</li>
+					<li>routes/rest.js</li>
+				</ul>
+			</div>
+		</div>
+	})
+	@html.block('scripts', function (model) {
+		<script src="/js/controller.js"></script>
+	})
+})

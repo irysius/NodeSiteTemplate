@@ -1,0 +1,5 @@
+﻿@html.extend('_shared/layout', function (model) {
+	@html.block('content', function (model) {
+
+	})
+})

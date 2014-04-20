@@ -1,0 +1,62 @@
+﻿@html.extend('_shared/layout', function (model) {
+	@html.block('content', function (model) {
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Demo</h3>
+				<p>The following sections demonstrate the use of route values, and uses a fictional user database (that's basically an object whose state will be wiped when the app goes down).</p>
+				<div>
+					<h4>Get Users</h4>
+					<p>
+						<label for="cboFilter">Filter by Gender:</label>
+						<select id="cboFilter" name="cboFilter" class="form-control">
+							<option value="">All</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+					</p>
+					<button type="button" class="btn btn-primary" onclick="paramCtrl.getUsers($('#cboFilter').val());">Process</button>
+				</div>
+				<div>
+					<h4>Get User</h4>
+					<label for="txtUserId">User ID:</label>
+					<input id="txtUserId" name="txtUserId" type="text" class="form-control"/><br />
+					<button type="button" class="btn btn-primary" onclick="paramCtrl.getUser($('#txtUserId').val());">Process</button>
+					<button type="button" class="btn btn-default" onclick="paramCtrl.getUserFirstName($('#txtUserId').val());">Process First Name</button>
+				</div>
+				<div>
+					<h4>Create User</h4>
+					<label for="txtFirstName">First Name:</label>
+					<input id="txtFirstName" name="txtFirstName" type="text" class="form-control" /><br />
+					<label for="txtLastName">Last Name:</label>
+					<input id="txtLastName" name="txtLastName" type="text" class="form-control" /><br />
+					<label for="cboGender">Gender:</label>
+					<select id="cboGender" name="cboGender" class="form-control">
+						<option value="">-Select-</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select><br />
+					<button type="button" class="btn btn-primary" onclick="paramCtrl.updateUser({ firstName: $('#txtFirstName').val(), lastName: $('#txtLastName').val(), gender: $('#cboGender').val() });">Process</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h3>Results</h3>
+				<textarea id="results" class="form-control" rows="10">
+				</textarea>
+			</div>
+			<div class="col-md-4">
+				<h3>Relevant files</h3>
+				<p><small>All files below assume siteroot.</small></p>
+				<ul>
+					<li>routes.js</li>
+					<li>routes/users.js</li>
+				</ul>
+			</div>
+		</div>
+	})
+	@html.block('scripts', function (model) {
+		<script src="/js/controller.js"></script>
+	})
+})
