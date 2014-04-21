@@ -62,6 +62,7 @@
     <TypeScriptCompile Include="siteroot\routes\home.ts" />
     <TypeScriptCompile Include="siteroot\routes\rest.ts" />
     <TypeScriptCompile Include="siteroot\routes\users.ts" />
+    <TypeScriptCompile Include="siteroot\sockets.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -89,3 +89,100 @@ var markdownCtrl = {
         })
     }
 }
+
+var socketsCtrl = {
+    Chat: function (socket, $username, $message, $messages) {
+        var connected = false;
+        var _username = '';
+
+        $message.on('keypress', function (event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                if ($message.val()) {
+                    _sendMessage($message.val());
+                    $message.val('');
+                }
+            }
+        })
+
+        socket.on('connect', function () {
+            onConnected();
+            var username = '';
+            if (!_username) {
+                username = promptUsername(0);
+            }
+
+            _setUsername(username);
+        });
+        socket.on('disconnect', function () {
+            onDisconnected();
+        })
+        socket.on('msg receive', function (data) {
+            console.log('rcv msg receive', data);
+            $messages.prepend(data);
+        })
+        socket.on('user joined', function (data) {
+            console.log('rcv user joined', data);
+            $messages.prepend(data + ' joined chat.');
+        })
+
+        function onConnected() {
+            console.log('connected');
+            connected = true;
+        }
+        function onDisconnected() {
+            console.log('disconnected');
+            connected = false;
+        }
+
+        function promptUsername(fails) {
+            var username = window.prompt('Enter your username.', '');
+            if (fails > 5 || username === null) {
+                username = 'random';
+                alert('Generating random username: ' + username);
+                return username;
+            }
+            if (username === '') {
+                alert('Please provide a valid username.')
+                username = promptUsername(fails + 1);
+            }
+            return username;
+        }
+        function _setUsername(username) {
+            console.log('snd username', username);
+            socket.emit('set username', username, function (data) {
+                console.log('rcv username', data);
+                _username = data;
+                $username.val(_username);
+            });
+        }
+        function _sendMessage(message) {
+            console.log('snd msg', message);
+            socket.emit('msg', message, function (data) {
+                console.log('rcv msg', data);
+                $messages.prepend(data);
+            });
+        }
+
+
+        return {
+            setUsername: function (username) {
+                if (connected) {
+                    _setUsername(username);
+                } else {
+                    alert('There is no socket connection to the server.');
+                }
+            },
+            sendMessage: function () {
+                if (_username === '') {
+                    alert('You have not set a username yet.');
+                } else {
+                    if ($message.val()) {
+                        _sendMessage($message.val());
+                        $message.val('');
+                    }
+                }
+            }
+        }
+    }
+}

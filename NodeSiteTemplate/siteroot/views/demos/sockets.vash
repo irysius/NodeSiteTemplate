@@ -1,5 +1,50 @@
 ﻿@html.extend('_shared/layout', function (model) {
 	@html.block('content', function (model) {
-		<p>Coming Soon</p>
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Demo</h3>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="username" class="col-sm-2 control-label">Username</label>
+						<div class="col-sm-10">
+							<input type="text" name="username" id="username" class="form-control" style="display:inline-block;" readonly />
+						</div>
+					</div>
+				</div>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" id="message" class="form-control" placeholder="Enter your message here" />
+						</div>
+						<div class="col-sm-3">
+							<button type="button" class="btn btn-primary btn-block" onclick="client.sendMessage();">Send</button>
+						</div>
+					</div>
+				</div>
+				<textarea class="form-control" id="messages" rows="20" style="resize: vertical;" readonly>
+				</textarea>
+			</div>
+			<div class="col-md-4">
+			<h3>Relevant files</h3>
+				<p><small>All files below assume siteroot.</small></p>
+				<ul>
+					<li>app.js</li>
+					<li>sockets.js</li>
+					<li>public/js/controller.js</li>
+					<li>views/demos/sockets.vash</li>
+				</ul>
+			</div>
+		</div>
+	})
+	@html.block('scripts', function (model) {
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/js/controller.js"></script>
+		<script>
+			var chat = io.connect('http://localhost:1337/chat');
+			var client = new socketsCtrl.Chat(chat, $('#username'), $('#message'), $('#messages'))
+		</script>
 	})
 })
