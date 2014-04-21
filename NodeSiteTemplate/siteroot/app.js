@@ -2,6 +2,8 @@
 var http = require('http');
 
 var routes = require('./routes');
+var sockets = require('./sockets');
+var io = require('socket.io');
 
 // Connect/Express middleware
 var body_parser = require('body-parser');
@@ -41,10 +43,15 @@ app.use(errorhandler({ dumpExceptions: true, showStack: true }));
 
 // Start the server
 var httpServer = http.createServer(app);
+
+io = io.listen(httpServer);
+io.set('log level', 1);
+
 httpServer.listen(1337); // use 0 to assign random port
 httpServer.on('listening', function () {
     console.log('listening on port: ', httpServer.address().port);
 });
+
 // var httpsServer = https.createServer(options, app);
 // httpsServer.listen(443);
-//# sourceMappingURL=app.js.map
+sockets.setupSockets(io);
