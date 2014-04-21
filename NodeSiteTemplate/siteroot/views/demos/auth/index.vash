@@ -1,0 +1,25 @@
+﻿@html.extend('_shared/layout', function (model) {
+	@html.block('content', function (model) {
+		<div class="jumbotron">
+			<h1>@model.title</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Demo</h3>
+				<h2>Basic Auth</h2>
+				<a class="btn btn-default" href="/demos/auth/basic">Basic Auth Test</a>
+				<p>You should be prompted with a username/password from your browser.</p>
+				<p>Closing every instance of the browser you use, or clearing the browser cache, will clear any saved Basic Auth headers.</p>
+				<p>Credentials for this demonstration: username/password</p>
+				<hr />
+			</div>
+			<div class="col-md-4">
+				<h3>Relevant files</h3>
+				<p><small>All files below assume siteroot.</small></p>
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	})
+})

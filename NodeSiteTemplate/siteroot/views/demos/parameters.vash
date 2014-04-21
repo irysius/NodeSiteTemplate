@@ -43,7 +43,7 @@
 			</div>
 			<div class="col-md-4">
 				<h3>Results</h3>
-				<textarea id="results" class="form-control" rows="10">
+				<textarea id="results" class="form-control" rows="20" style="resize: vertical;">
 				</textarea>
 			</div>
 			<div class="col-md-4">

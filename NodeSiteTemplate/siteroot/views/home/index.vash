@@ -34,6 +34,10 @@
 				<p><small>Markdown compiler.</small></p>
 				<p><a class="btn btn-info" href="@model.markedlink">More about Marked &raquo;</a></p>
 
+				<h3>Basic-auth</h3>
+				<p><small>constructs a user from the request headers.</small></p>
+				<p><a class="btn btn-info" href="@model.basicauthlink">More about Basic-auth &raquo;</a></p>
+
 				<h3>Everyauth</h3> 
 				<p><small>authentication handler for a lot of different services</small></p>
 				<p><a class="btn btn-info" href="@model.everyauthlink">More about Everyauth &raquo;</a></p>

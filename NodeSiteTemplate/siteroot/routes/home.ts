@@ -10,6 +10,7 @@ export function index(req: express.Request, res: express.Response) {
         lodashlink: '//lodash.com',
         socketiolink: '//socket.io',
         markedlink: '//github.com/chjj/marked',
+        basicauthlink: '//github.com/visionmedia/node-basic-auth',
         everyauthlink: '//github.com/bnoguchi/everyauth',
         foreverlink: '//github.com/nodejitsu/forever'
     };

@@ -24,7 +24,7 @@ var paramCtrl = {
             url: '/users/' + id + '/firstname',
             type: 'GET',
             success: function (data, status, xhr) {
-                self.$response.html(JSON.stringify(data));
+                self.$response.html(JSON.stringify(data, null, 4));
             }
         })
     },
@@ -36,7 +36,7 @@ var paramCtrl = {
             url: '/users/' + id,
             type: 'GET',
             success: function (data, status, xhr) {
-                self.$response.html(JSON.stringify(data));
+                self.$response.html(JSON.stringify(data, null, 4));
             }
         })
     },
@@ -52,7 +52,7 @@ var paramCtrl = {
             url: url,
             type: 'GET',
             success: function (data, status, xhr) {
-                self.$response.html(JSON.stringify(data));
+                self.$response.html(JSON.stringify(data, null, 4));
             }
         })
     },
@@ -65,7 +65,26 @@ var paramCtrl = {
             type: 'POST',
             data: user,
             success: function (data, status, xhr) {
-                self.$response.html(JSON.stringify(data));
+                self.$response.html(JSON.stringify(data, null, 4));
+            }
+        })
+    }
+}
+
+var markdownCtrl = {
+    $response: null,
+    parse: function (text) {
+        console.log(text);
+        var self = markdownCtrl;
+        if (!self.$response) self.$response = $('#results');
+        self.$response.html('');
+        $.ajax({
+            url: '/demos/markdown',
+            type: 'POST',
+            data: { raw: text },
+            success: function (data, status, xhr) {
+                console.log(data);
+                self.$response.html(data.parsed);
             }
         })
     }

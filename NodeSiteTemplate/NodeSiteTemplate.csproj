@@ -58,6 +58,7 @@
     <TypeScriptCompile Include="siteroot\app.ts" />
     <TypeScriptCompile Include="siteroot\routes.ts" />
     <TypeScriptCompile Include="siteroot\routes\demos.ts" />
+    <TypeScriptCompile Include="siteroot\routes\demos\auth.ts" />
     <TypeScriptCompile Include="siteroot\routes\home.ts" />
     <TypeScriptCompile Include="siteroot\routes\rest.ts" />
     <TypeScriptCompile Include="siteroot\routes\users.ts" />
@@ -71,15 +72,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <None Include="siteroot\views\demos\auth\failure.vash" />
+    <None Include="siteroot\views\demos\auth\success.vash" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Markdown.md" />
     <None Include="README.md" />
     <None Include="siteroot\views\demos\404.vash" />
-    <None Include="siteroot\views\demos\basicauth.vash" />
+    <None Include="siteroot\views\demos\auth\index.vash" />
     <None Include="siteroot\views\demos\error.vash" />
     <None Include="siteroot\views\demos\index.vash" />
     <None Include="siteroot\views\demos\markdown.vash" />

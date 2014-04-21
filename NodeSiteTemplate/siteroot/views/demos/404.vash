@@ -14,7 +14,7 @@
 				<p><small>All files below assume siteroot.</small></p>
 				<ul>
 					<li>app.js</li>
-					<li>views/404.vash</li>
+					<li>views/_shared/404.vash</li>
 				</ul>
 			</div>
 		</div>

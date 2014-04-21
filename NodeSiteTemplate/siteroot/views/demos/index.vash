@@ -6,13 +6,13 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<p><a class="btn btn-info" href="/demos/404">Showing 404s &raquo;</a></p>
+				<p><a class="btn btn-info btn-block" href="/demos/404">Showing 404s &raquo;</a></p>
 				<p><a class="btn btn-info" href="/demos/error">Showing Error Pages &raquo;</a></p>
 				<p><a class="btn btn-info" href="/about.html">Serving Static Pages &raquo;</a></p>
 				<p><a class="btn btn-info" href="/demos/rest">Basic REST API &raquo;</a></p>
 				<p><a class="btn btn-info" href="/demos/parameters">Routing Parameters &raquo;</a></p>
 				<p><a class="btn btn-info" href="/demos/markdown">Using Marked for Markdown rendering &raquo;</a></p>
-				<p><a class="btn btn-info" href="/demos/basicauth">Basic Authentication &raquo;</a></p>
+				<p><a class="btn btn-info" href="/demos/auth">Basic Authentication &raquo;</a></p>
 				<p><a class="btn btn-info" href="/demos/sockets">Basic Socket.io &raquo;</a></p>
 			</div>
 		</div>
