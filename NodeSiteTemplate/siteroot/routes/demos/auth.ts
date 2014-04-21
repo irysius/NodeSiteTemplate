@@ -18,16 +18,16 @@ auth.get('/basic', function (req, res, next) {
     var user = basicauth(req);
     console.log(user);
 
+    var model = {
+        title: 'Basic Authentication'
+    };
+
     if (!user) {
         res.statusCode = 401;
         res.setHeader('WWW-Authenticate', 'Basic');
         res.render(root + '/failure', model);
         return;
     }
-
-    var model = {
-        title: 'Basic Authentication'
-    };
 
     // basic-auth module returns a user with name and pass (not username or password).
     if (user.name === 'username' && user.pass === 'password') {
