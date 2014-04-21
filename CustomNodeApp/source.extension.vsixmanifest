@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="nodets..380360ee-4241-4108-9f6c-fbf20db59e72" Version="1.0.2" Language="en-US" Publisher="Lester Sy" />
+    <Identity Id="nodets..380360ee-4241-4108-9f6c-fbf20db59e72" Version="1.0.3" Language="en-US" Publisher="Lester Sy" />
     <DisplayName>Custom Node Template</DisplayName>
     <Description xml:space="preserve">Custom node.js app using TypeScript.
 Contains express 4.x, lodash, vash (view engine).</Description>

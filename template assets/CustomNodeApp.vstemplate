@@ -14,6 +14,7 @@
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="NodeSiteTemplate.csproj" File="NodeSiteTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="Markdown.md">Markdown.md</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="README.md">README.md</ProjectItem>
@@ -31,9 +32,6 @@
           <Folder Name="node" TargetFolderName="node">
             <ProjectItem ReplaceParameters="true" TargetFileName="node.d.ts">node.d.ts</ProjectItem>
           </Folder>
-          <Folder Name="socket.io" TargetFolderName="socket.io">
-            <ProjectItem ReplaceParameters="true" TargetFileName="socket.io.d.ts">socket.io.d.ts</ProjectItem>
-          </Folder>
         </Folder>
       </Folder>
       <Folder Name="siteroot" TargetFolderName="siteroot">
@@ -41,12 +39,22 @@
         <Folder Name="models" TargetFolderName="models" />
         <ProjectItem ReplaceParameters="false" TargetFileName="package.json">package.json</ProjectItem>
         <Folder Name="public" TargetFolderName="public">
+          <ProjectItem ReplaceParameters="true" TargetFileName="about.html">about.html</ProjectItem>
           <Folder Name="css" TargetFolderName="css">
+            <Folder Name="lib" TargetFolderName="lib">
+              <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css">bootstrap.min.css</ProjectItem>
+            </Folder>
             <ProjectItem ReplaceParameters="true" TargetFileName="site.css">site.css</ProjectItem>
           </Folder>
+          <Folder Name="fonts" TargetFolderName="fonts">
+            <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.eot">glyphicons-halflings-regular.eot</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.svg">glyphicons-halflings-regular.svg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.ttf">glyphicons-halflings-regular.ttf</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.woff">glyphicons-halflings-regular.woff</ProjectItem>
+          </Folder>
           <Folder Name="img" TargetFolderName="img" />
-          <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
           <Folder Name="js" TargetFolderName="js">
+            <ProjectItem ReplaceParameters="true" TargetFileName="controller.js">controller.js</ProjectItem>
             <Folder Name="lib" TargetFolderName="lib">
               <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.11.0.min.js">jquery-1.11.0.min.js</ProjectItem>
               <ProjectItem ReplaceParameters="true" TargetFileName="jquery-2.1.0.min.js">jquery-2.1.0.min.js</ProjectItem>
@@ -55,15 +63,34 @@
           </Folder>
         </Folder>
         <Folder Name="routes" TargetFolderName="routes">
-          <ProjectItem ReplaceParameters="true" TargetFileName="actions.ts">actions.ts</ProjectItem>
+          <Folder Name="demos" TargetFolderName="demos">
+            <ProjectItem ReplaceParameters="true" TargetFileName="auth.ts">auth.ts</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="demos.ts">demos.ts</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="home.ts">home.ts</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="rest.ts">rest.ts</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="users.ts">users.ts</ProjectItem>
         </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="routes.ts">routes.ts</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="sockets.ts">sockets.ts</ProjectItem>
         <Folder Name="views" TargetFolderName="views">
           <Folder Name="_shared" TargetFolderName="_shared">
             <ProjectItem ReplaceParameters="false" TargetFileName="404.vash">404.vash</ProjectItem>
             <ProjectItem ReplaceParameters="false" TargetFileName="layout.vash">layout.vash</ProjectItem>
+          </Folder>
+          <Folder Name="demos" TargetFolderName="demos">
+            <ProjectItem ReplaceParameters="false" TargetFileName="404.vash">404.vash</ProjectItem>
+            <Folder Name="auth" TargetFolderName="auth">
+              <ProjectItem ReplaceParameters="false" TargetFileName="failure.vash">failure.vash</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="index.vash">index.vash</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="success.vash">success.vash</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="false" TargetFileName="error.vash">error.vash</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="index.vash">index.vash</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="markdown.vash">markdown.vash</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="parameters.vash">parameters.vash</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="rest.vash">rest.vash</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="sockets.vash">sockets.vash</ProjectItem>
           </Folder>
           <Folder Name="home" TargetFolderName="home">
             <ProjectItem ReplaceParameters="false" TargetFileName="index.vash">index.vash</ProjectItem>

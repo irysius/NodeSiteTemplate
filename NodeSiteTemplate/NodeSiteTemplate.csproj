@@ -37,6 +37,7 @@
   <ItemGroup>
     <Content Include="siteroot\public\css\lib\bootstrap.min.css" />
     <Content Include="siteroot\public\css\site.css" />
+    <Content Include="siteroot\public\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="siteroot\public\js\controller.js" />
     <Content Include="siteroot\public\js\lib\jquery-1.11.0.min.js" />
     <Content Include="siteroot\public\js\lib\jquery-2.1.0.min.js" />
@@ -72,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <None Include="siteroot\public\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="siteroot\public\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="siteroot\public\fonts\glyphicons-halflings-regular.woff" />
     <None Include="siteroot\views\demos\auth\failure.vash" />
     <None Include="siteroot\views\demos\auth\success.vash" />
   </ItemGroup>
